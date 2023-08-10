@@ -1,8 +1,12 @@
 #[macro_use] extern crate rocket;
 
-#[get("/")]
-fn index() -> &'static str {
-    "Hello, world!"
+use rocket::tokio;
+use rocket::data::{Data, ToByteUnit};
+
+#[post("/", data = "<data>")]
+async fn index(data: Data<'_>) -> std::io::Result<()> {
+    data.open(10.bytes()).stream_to(tokio::io::stdout()).await?;
+    Ok(())
 }
 
 #[launch]
