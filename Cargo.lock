@@ -461,6 +461,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "infer"
+version = "0.3.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "865e8a58ae8e24d2c4412c31344afa1d302a3740ad67528c10f50d6876cdcf55"
+
+[[package]]
 name = "inlinable_string"
 version = "0.1.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -880,6 +886,8 @@ dependencies = [
 name = "rocket-streaming-1"
 version = "0.1.0"
 dependencies = [
+ "infer",
+ "multer",
  "rocket",
  "tokio",
  "tokio-util",

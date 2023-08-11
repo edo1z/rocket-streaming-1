@@ -7,3 +7,5 @@ edition = "2021"
 rocket = "=0.5.0-rc.3"
 tokio = {version = "1.30.0", features = ["full"]}
 tokio-util = { version = "0.7", features = ["io"] }
+multer = "2.0"
+infer = "0.3"
